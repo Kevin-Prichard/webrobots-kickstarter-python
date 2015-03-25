@@ -1,0 +1,426 @@
+[
+    {
+      "projects": [
+        {
+          "id": 2038083154,
+          "name": "Pretty Filthy:  A new musical about the “other” Hollywood!",
+          "blurb": "The award-winning Civilians theater company is producing a new musical about porn, inspired by real-life stories.",
+          "goal": 25000,
+          "pledged": 1636,
+          "state": "live",
+          "slug": "pretty-filthy-a-new-musical-about-the-other-hollyw",
+          "disable_communication": false,
+          "country": "US",
+          "currency": "USD",
+          "currency_symbol": "$",
+          "currency_trailing_code": true,
+          "deadline": 1419397140,
+          "state_changed_at": 1417370931,
+          "created_at": 1416240462,
+          "launched_at": 1417370930,
+          "backers_count": 12,
+          "photo": {
+            "full": "https://s3.amazonaws.com/ksr/projects/1486287/photo-full.jpg?1416240953",
+            "ed": "https://s3.amazonaws.com/ksr/projects/1486287/photo-ed.jpg?1416240953",
+            "med": "https://s3.amazonaws.com/ksr/projects/1486287/photo-med.jpg?1416240953",
+            "little": "https://s3.amazonaws.com/ksr/projects/1486287/photo-little.jpg?1416240953",
+            "small": "https://s3.amazonaws.com/ksr/projects/1486287/photo-small.jpg?1416240953",
+            "thumb": "https://s3.amazonaws.com/ksr/projects/1486287/photo-thumb.jpg?1416240953",
+            "1024x768": "https://s3.amazonaws.com/ksr/projects/1486287/photo-1024x768.jpg?1416240953",
+            "1536x1152": "https://s3.amazonaws.com/ksr/projects/1486287/photo-1536x1152.jpg?1416240953"
+          },
+          "creator": {
+            "id": 2135584053,
+            "name": "The Civilians",
+            "avatar": {
+              "thumb": "https://s3.amazonaws.com/ksr/avatars/13113374/slash.thumb.jpg?1417413238",
+              "small": "https://s3.amazonaws.com/ksr/avatars/13113374/slash.small.jpg?1417413238",
+              "medium": "https://s3.amazonaws.com/ksr/avatars/13113374/slash.medium.jpg?1417413238"
+            },
+            "urls": {
+              "web": {
+                "user": "https://www.kickstarter.com/profile/2135584053"
+              },
+              "api": {
+                "user": "https://api.kickstarter.com/v1/users/2135584053?signature=1417618147.56fe238e5f853e90fc2186b7a5ec8a177994e096"
+              }
+            }
+          },
+          "location": {
+            "id": 2459115,
+            "name": "New York",
+            "slug": "new-york-ny",
+            "short_name": "New York, NY",
+            "displayable_name": "New York, NY",
+            "country": "US",
+            "state": "NY",
+            "type": "Town",
+            "is_root": false,
+            "urls": {
+              "web": {
+                "discover": "https://www.kickstarter.com/discover/places/new-york-ny",
+                "location": "https://www.kickstarter.com/locations/new-york-ny"
+              },
+              "api": {
+                "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1417580428.f52d470e330e8186f7942855e34c5901a5df735b&woe_id=2459115"
+              }
+            }
+          },
+          "category": {
+            "id": 284,
+            "name": "Musical",
+            "slug": "theater/musical",
+            "position": 4,
+            "parent_id": 17,
+            "urls": {
+              "web": {
+                "discover": "http://www.kickstarter.com/discover/categories/theater/musical"
+              }
+            }
+          },
+          "urls": {
+            "web": {
+              "project": "https://www.kickstarter.com/projects/2135584053/pretty-filthy-a-new-musical-about-the-other-hollyw?ref=category",
+              "rewards": "https://www.kickstarter.com/projects/2135584053/pretty-filthy-a-new-musical-about-the-other-hollyw/rewards"
+            }
+          }
+        },
+        {
+          "id": 779490704,
+          "name": "All-Female Richard III",
+          "blurb": "A ground breaking production to empower, inform and entertain new audiences, shake stuff up and inspire change. Who holds the power?",
+          "goal": 7000,
+          "pledged": 2253,
+          "state": "live",
+          "slug": "all-female-richard-iii",
+          "disable_communication": false,
+          "country": "GB",
+          "currency": "GBP",
+          "currency_symbol": "£",
+          "currency_trailing_code": false,
+          "deadline": 1418994978,
+          "state_changed_at": 1416402978,
+          "created_at": 1415625141,
+          "launched_at": 1416402978,
+          "backers_count": 77,
+          "photo": {
+            "full": "https://s3.amazonaws.com/ksr/projects/1470700/photo-full.jpg?1415625735",
+            "ed": "https://s3.amazonaws.com/ksr/projects/1470700/photo-ed.jpg?1415625735",
+            "med": "https://s3.amazonaws.com/ksr/projects/1470700/photo-med.jpg?1415625735",
+            "little": "https://s3.amazonaws.com/ksr/projects/1470700/photo-little.jpg?1415625735",
+            "small": "https://s3.amazonaws.com/ksr/projects/1470700/photo-small.jpg?1415625735",
+            "thumb": "https://s3.amazonaws.com/ksr/projects/1470700/photo-thumb.jpg?1415625735",
+            "1024x768": "https://s3.amazonaws.com/ksr/projects/1470700/photo-1024x768.jpg?1415625735",
+            "1536x1152": "https://s3.amazonaws.com/ksr/projects/1470700/photo-1536x1152.jpg?1415625735"
+          },
+          "creator": {
+            "id": 647561166,
+            "name": "Omidaze Productions",
+            "avatar": {
+              "thumb": "https://s3.amazonaws.com/ksr/avatars/10725247/Omidaze_image_1_web_WMC_Brochure_image.thumb.jpg?1413930472",
+              "small": "https://s3.amazonaws.com/ksr/avatars/10725247/Omidaze_image_1_web_WMC_Brochure_image.small.jpg?1413930472",
+              "medium": "https://s3.amazonaws.com/ksr/avatars/10725247/Omidaze_image_1_web_WMC_Brochure_image.medium.jpg?1413930472"
+            },
+            "urls": {
+              "web": {
+                "user": "https://www.kickstarter.com/profile/647561166"
+              },
+              "api": {
+                "user": "https://api.kickstarter.com/v1/users/647561166?signature=1417618147.e2238a861ba13ce9a76ed4489e7148143a5a9462"
+              }
+            }
+          },
+          "location": {
+            "id": 15127,
+            "name": "Cardiff",
+            "slug": "cardiff-gb",
+            "short_name": "Cardiff, UK",
+            "displayable_name": "Cardiff, UK",
+            "country": "GB",
+            "state": "Wales",
+            "type": "Town",
+            "is_root": false,
+            "urls": {
+              "web": {
+                "discover": "https://www.kickstarter.com/discover/places/cardiff-gb",
+                "location": "https://www.kickstarter.com/locations/cardiff-gb"
+              },
+              "api": {
+                "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1417580432.2d5e77f022a480e706a0fa71b428eb9693cf5c32&woe_id=15127"
+              }
+            }
+          },
+          "category": {
+            "id": 17,
+            "name": "Theater",
+            "slug": "theater",
+            "position": 15,
+            "urls": {
+              "web": {
+                "discover": "http://www.kickstarter.com/discover/categories/theater"
+              }
+            }
+          },
+          "urls": {
+            "web": {
+              "project": "https://www.kickstarter.com/projects/647561166/all-female-richard-iii?ref=category",
+              "rewards": "https://www.kickstarter.com/projects/647561166/all-female-richard-iii/rewards"
+            }
+          }
+        },
+        {
+          "id": 559180170,
+          "name": "Lonely Soldier Monologues a play by Helen Benedict.",
+          "blurb": "A brave & relevant play that looks at the lives of 7 real women who served in the US Armed Forces. Authentic stories that need telling.",
+          "goal": 12000,
+          "pledged": 967,
+          "state": "live",
+          "slug": "lonely-soldier-monologues-a-play-by-helen-benedict",
+          "disable_communication": false,
+          "country": "GB",
+          "currency": "GBP",
+          "currency_symbol": "£",
+          "currency_trailing_code": false,
+          "deadline": 1419984000,
+          "state_changed_at": 1417132986,
+          "created_at": 1415110383,
+          "launched_at": 1417132986,
+          "backers_count": 29,
+          "photo": {
+            "full": "https://s3.amazonaws.com/ksr/projects/1457133/photo-full.jpg?1415111239",
+            "ed": "https://s3.amazonaws.com/ksr/projects/1457133/photo-ed.jpg?1415111239",
+            "med": "https://s3.amazonaws.com/ksr/projects/1457133/photo-med.jpg?1415111239",
+            "little": "https://s3.amazonaws.com/ksr/projects/1457133/photo-little.jpg?1415111239",
+            "small": "https://s3.amazonaws.com/ksr/projects/1457133/photo-small.jpg?1415111239",
+            "thumb": "https://s3.amazonaws.com/ksr/projects/1457133/photo-thumb.jpg?1415111239",
+            "1024x768": "https://s3.amazonaws.com/ksr/projects/1457133/photo-1024x768.jpg?1415111239",
+            "1536x1152": "https://s3.amazonaws.com/ksr/projects/1457133/photo-1536x1152.jpg?1415111239"
+          },
+          "creator": {
+            "id": 1587357213,
+            "name": "PMJ with Liminal Space Productions",
+            "avatar": {
+              "thumb": "https://s3.amazonaws.com/ksr/avatars/12864644/Liminal_Space_Logo_copy.thumb.jpg?1414604966",
+              "small": "https://s3.amazonaws.com/ksr/avatars/12864644/Liminal_Space_Logo_copy.small.jpg?1414604966",
+              "medium": "https://s3.amazonaws.com/ksr/avatars/12864644/Liminal_Space_Logo_copy.medium.jpg?1414604966"
+            },
+            "urls": {
+              "web": {
+                "user": "https://www.kickstarter.com/profile/1587357213"
+              },
+              "api": {
+                "user": "https://api.kickstarter.com/v1/users/1587357213?signature=1417618147.8133cf5cd58e8c341b11515a4b7e3b7ee937e7c6"
+              }
+            }
+          },
+          "location": {
+            "id": 44418,
+            "name": "London",
+            "slug": "london-gb",
+            "short_name": "London, UK",
+            "displayable_name": "London, UK",
+            "country": "GB",
+            "state": "England",
+            "type": "Town",
+            "is_root": false,
+            "urls": {
+              "web": {
+                "discover": "https://www.kickstarter.com/discover/places/london-gb",
+                "location": "https://www.kickstarter.com/locations/london-gb"
+              },
+              "api": {
+                "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1417580429.6ddcf11a00710c09b726b522e055936a9a616ecf&woe_id=44418"
+              }
+            }
+          },
+          "category": {
+            "id": 285,
+            "name": "Plays",
+            "slug": "theater/plays",
+            "position": 5,
+            "parent_id": 17,
+            "urls": {
+              "web": {
+                "discover": "http://www.kickstarter.com/discover/categories/theater/plays"
+              }
+            }
+          },
+          "urls": {
+            "web": {
+              "project": "https://www.kickstarter.com/projects/1587357213/lonely-soldier-monologues-a-play-by-helen-benedict?ref=category",
+              "rewards": "https://www.kickstarter.com/projects/1587357213/lonely-soldier-monologues-a-play-by-helen-benedict/rewards"
+            }
+          }
+        },
+        {
+          "id": 1611964556,
+          "name": "FIELD HOCKEY HOT - a world premiere musical!",
+          "blurb": "Join the team to help 11th Hour Theatre Company bring their 1st WORLD PREMIERE MUSICAL to Philadelphia this March!",
+          "goal": 15000,
+          "pledged": 6067,
+          "state": "live",
+          "slug": "field-hockey-hot-a-world-premiere-musical",
+          "disable_communication": false,
+          "country": "US",
+          "currency": "USD",
+          "currency_symbol": "$",
+          "currency_trailing_code": true,
+          "deadline": 1418702400,
+          "state_changed_at": 1415682456,
+          "created_at": 1414686145,
+          "launched_at": 1415682456,
+          "backers_count": 90,
+          "photo": {
+            "full": "https://s3.amazonaws.com/ksr/projects/1446865/photo-full.jpg?1414774100",
+            "ed": "https://s3.amazonaws.com/ksr/projects/1446865/photo-ed.jpg?1414774100",
+            "med": "https://s3.amazonaws.com/ksr/projects/1446865/photo-med.jpg?1414774100",
+            "little": "https://s3.amazonaws.com/ksr/projects/1446865/photo-little.jpg?1414774100",
+            "small": "https://s3.amazonaws.com/ksr/projects/1446865/photo-small.jpg?1414774100",
+            "thumb": "https://s3.amazonaws.com/ksr/projects/1446865/photo-thumb.jpg?1414774100",
+            "1024x768": "https://s3.amazonaws.com/ksr/projects/1446865/photo-1024x768.jpg?1414774100",
+            "1536x1152": "https://s3.amazonaws.com/ksr/projects/1446865/photo-1536x1152.jpg?1414774100"
+          },
+          "creator": {
+            "id": 318653143,
+            "name": "11th Hour Theatre Company",
+            "avatar": {
+              "thumb": "https://s3.amazonaws.com/ksr/avatars/12094584/11thhourlogo.thumb.jpg?1414771345",
+              "small": "https://s3.amazonaws.com/ksr/avatars/12094584/11thhourlogo.small.jpg?1414771345",
+              "medium": "https://s3.amazonaws.com/ksr/avatars/12094584/11thhourlogo.medium.jpg?1414771345"
+            },
+            "urls": {
+              "web": {
+                "user": "https://www.kickstarter.com/profile/318653143"
+              },
+              "api": {
+                "user": "https://api.kickstarter.com/v1/users/318653143?signature=1417618147.f97394c6d8229e1a4c5c9a26c4a67ce77698866f"
+              }
+            }
+          },
+          "location": {
+            "id": 2471217,
+            "name": "Philadelphia",
+            "slug": "philadelphia-pa",
+            "short_name": "Philadelphia, PA",
+            "displayable_name": "Philadelphia, PA",
+            "country": "US",
+            "state": "PA",
+            "type": "Town",
+            "is_root": false,
+            "urls": {
+              "web": {
+                "discover": "https://www.kickstarter.com/discover/places/philadelphia-pa",
+                "location": "https://www.kickstarter.com/locations/philadelphia-pa"
+              },
+              "api": {
+                "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1417580428.d0d6753d012ae80ea487efb2535da6208991de22&woe_id=2471217"
+              }
+            }
+          },
+          "category": {
+            "id": 284,
+            "name": "Musical",
+            "slug": "theater/musical",
+            "position": 4,
+            "parent_id": 17,
+            "urls": {
+              "web": {
+                "discover": "http://www.kickstarter.com/discover/categories/theater/musical"
+              }
+            }
+          },
+          "urls": {
+            "web": {
+              "project": "https://www.kickstarter.com/projects/318653143/field-hockey-hot-a-world-premiere-musical?ref=category",
+              "rewards": "https://www.kickstarter.com/projects/318653143/field-hockey-hot-a-world-premiere-musical/rewards"
+            }
+          }
+        },
+        {
+          "id": 1803104945,
+          "name": "A Home for Comedy in Vermont!",
+          "blurb": "WE MADE OUR GOAL! THANK YOU!! Our stretch goal is $35k; let's build a home for standup/improv shows & classes in VT!",
+          "goal": 25000,
+          "pledged": 26192,
+          "state": "live",
+          "slug": "a-home-for-comedy-in-vermont",
+          "disable_communication": false,
+          "country": "US",
+          "currency": "USD",
+          "currency_symbol": "$",
+          "currency_trailing_code": true,
+          "deadline": 1417906649,
+          "state_changed_at": 1414015049,
+          "created_at": 1404264662,
+          "launched_at": 1414015049,
+          "backers_count": 278,
+          "photo": {
+            "full": "https://s3.amazonaws.com/ksr/projects/1069250/photo-full.jpg?1414157569",
+            "ed": "https://s3.amazonaws.com/ksr/projects/1069250/photo-ed.jpg?1414157569",
+            "med": "https://s3.amazonaws.com/ksr/projects/1069250/photo-med.jpg?1414157569",
+            "little": "https://s3.amazonaws.com/ksr/projects/1069250/photo-little.jpg?1414157569",
+            "small": "https://s3.amazonaws.com/ksr/projects/1069250/photo-small.jpg?1414157569",
+            "thumb": "https://s3.amazonaws.com/ksr/projects/1069250/photo-thumb.jpg?1414157569",
+            "1024x768": "https://s3.amazonaws.com/ksr/projects/1069250/photo-1024x768.jpg?1414157569",
+            "1536x1152": "https://s3.amazonaws.com/ksr/projects/1069250/photo-1536x1152.jpg?1414157569"
+          },
+          "creator": {
+            "id": 57837904,
+            "name": "Vermont Comedy Club",
+            "slug": "vermontcomedyclub",
+            "avatar": {
+              "thumb": "https://s3.amazonaws.com/ksr/avatars/11205768/Screen_Shot_2014-10-22_at_1.26.41_PM.thumb.jpg?1413998816",
+              "small": "https://s3.amazonaws.com/ksr/avatars/11205768/Screen_Shot_2014-10-22_at_1.26.41_PM.small.jpg?1413998816",
+              "medium": "https://s3.amazonaws.com/ksr/avatars/11205768/Screen_Shot_2014-10-22_at_1.26.41_PM.medium.jpg?1413998816"
+            },
+            "urls": {
+              "web": {
+                "user": "https://www.kickstarter.com/profile/vermontcomedyclub"
+              },
+              "api": {
+                "user": "https://api.kickstarter.com/v1/users/57837904?signature=1417618147.b8319a3ba63da285fa38115b052f9ec54076e870"
+              }
+            }
+          },
+          "location": {
+            "id": 2372071,
+            "name": "Burlington",
+            "slug": "burlington-vt",
+            "short_name": "Burlington, VT",
+            "displayable_name": "Burlington, VT",
+            "country": "US",
+            "state": "VT",
+            "type": "Town",
+            "is_root": false,
+            "urls": {
+              "web": {
+                "discover": "https://www.kickstarter.com/discover/places/burlington-vt",
+                "location": "https://www.kickstarter.com/locations/burlington-vt"
+              },
+              "api": {
+                "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1417580432.0937aa399fefb8a965d05532826f945e173d88be&woe_id=2372071"
+              }
+            }
+          },
+          "category": {
+            "id": 286,
+            "name": "Spaces",
+            "slug": "theater/spaces",
+            "position": 6,
+            "parent_id": 17,
+            "urls": {
+              "web": {
+                "discover": "http://www.kickstarter.com/discover/categories/theater/spaces"
+              }
+            }
+          },
+          "urls": {
+            "web": {
+              "project": "https://www.kickstarter.com/projects/vermontcomedyclub/a-home-for-comedy-in-vermont?ref=category",
+              "rewards": "https://www.kickstarter.com/projects/vermontcomedyclub/a-home-for-comedy-in-vermont/rewards"
+            }
+          }
+        }
+      ]
+    }
+]
