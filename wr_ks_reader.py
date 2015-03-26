@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import json, sys, copy, os
+import json, sys, copy, os, re
 import pprint
 import locale
 import csv
@@ -61,13 +61,38 @@ def read_usd_fx_table(usd_fx_csv_pathname):
                 }
     return fxusd
 
-def main(wr_kickstarter_json_path,usd_fx_pathname):
+def prep_predicates(filters):
+    preds = []
+    for filter in filters:
+        (path,value) = re.split('\s*=\s*',filter)
+        path_els = path.split('/')
+        values = value.split(',')
+        preds.append({"path_els":path_els,"values":values})
+    return preds
+
+def project_predicate_test(proj,predicates):
+    v = proj
+    match = False
+    for pred in predicates:
+        print pred
+        for path_el in pred['path_els']:
+            v = v[path_el]
+            print path_el, ", ", v,", ", pred['values']
+        sv=str(v)
+        if (sv==pred['values']) or (type(pred['values'])==list and sv in pred['values']):
+            match = True
+            break
+    print 'match %s' % match
+    return match
+
+def main(wr_kickstarter_json_path,usd_fx_pathname,filter_predicates=[]):
+    predicates = prep_predicates(filter_predicates) if filter_predicates else []
     fxusd = read_usd_fx_table(usd_fx_pathname)
-    (report,schema) = gen_ks_report(wr_kickstarter_json_path,fxusd)
+    (report,schema) = gen_ks_report(wr_kickstarter_json_path,fxusd,predicates)
     print json.dumps(schema,indent=4)
     print report
 
-def gen_ks_report(wr_kickstarter_json_path,fxusd):
+def gen_ks_report(wr_kickstarter_json_path,fxusd,predicates=[]):
     json_data = open(wr_kickstarter_json_path).read()
     j = json.loads(json_data)
     schema_tree = defaultdict(dict)
@@ -76,24 +101,15 @@ def gen_ks_report(wr_kickstarter_json_path,fxusd):
     template = {
         "pled_ctry"  : dict(),
         "goal_ctry"  : dict(),
-        "cnt_ctry"  : dict(),
+        "cnt_ctry"   : dict(),
         "pled_cat"   : dict(),
         "goal_cat"   : dict(),
-        "cnt_cat"   : dict(),
+        "cnt_cat"    : dict(),
         "pled_state" : 0,
         "goal_state" : 0,
-        "cnt_state" : 0
+        "cnt_state"  : 0
     }
 
-    """
-    tots = {
-        "live" : copy.deepcopy(template),
-        "successful" : copy.deepcopy(template),
-        "failed" : copy.deepcopy(template),
-        "canceled" : copy.deepcopy(template),
-        "suspended" : copy.deepcopy(template)
-    }
-    """
     """
 92562 failed
 74635 successful
@@ -104,17 +120,19 @@ def gen_ks_report(wr_kickstarter_json_path,fxusd):
 
     cnt_all = 0
     for block_of_projects in j:
-        projects = block_of_projects["projects"]
-        proj_count = len(projects)
+        proj_count = len(block_of_projects["projects"])
         for i in range(proj_count):
-            proj = projects[i]
+            proj = block_of_projects["projects"][i]
+            if predicates and not project_predicate_test(proj,predicates):
+                print "bonk!"
+                continue
             # Build schema
             get_key_tree(proj,schema_tree)
             # Grab project values
             pled = proj["pledged"] * fxusd[proj["currency"]]["cur_buys_usd"]
             #goal = proj["goal"] * fxusd[proj["currency"]]["cur_buys_usd"]
             ctry = proj["country"]
-            cat = proj["category"]["name"]
+            cat = "%s (%s)" % (proj["category"]["name"],proj["category"]["id"])
             state = proj["state"]
 
             # Ensure accumulation skeleton exists
@@ -148,8 +166,11 @@ def gen_ks_report(wr_kickstarter_json_path,fxusd):
     return (buf,schema_tree)
 
 if __name__ == '__main__':
-    if (len(sys.argv)<3) or not os.path.exists(sys.argv[1]) or not os.path.exists(sys.argv[2]):
+    min_args = 3
+    print len(sys.argv)<min_args
+    print (not os.path.exists(sys.argv[1]) or not os.path.exists(sys.argv[2]))
+    if (len(sys.argv)<min_args) or (not os.path.exists(sys.argv[1]) or not os.path.exists(sys.argv[2])):
         print "Usage: wr_ks_reader.py <werobots_ks_data.json> <usd_fx_csv>"
         print "e.g. ./wr_ks_reader.py sample-data/five_projects_from-2014-12-02.json sample-data/usd_all_2015-03-25.csv"
         exit()
-    main(sys.argv[1],sys.argv[2])
+    main(sys.argv[1],sys.argv[2],sys.argv[3:] if len(sys.argv)>min_args else None)

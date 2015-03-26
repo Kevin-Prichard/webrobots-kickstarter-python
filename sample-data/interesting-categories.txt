@@ -1,0 +1,131 @@
+3D Printing (331)            666,238        59  11,292
+Academic (323)        48,348        94     514
+Accessories (262)            196,037       231     848
+Action (291)         246,120        84   2,930
+Animation (29)     1,781,201       937   1,900
+Apparel (263)        433,877       747     580
+Apps (332)           475,100       657     723
+Architecture (258)            84,943        94     903
+Art (1)    1,608,049     1,952     823
+Art Book (45)        881,987       602   1,465
+Audio (357)           46,227        31   1,491
+Blues (316)           32,333        26   1,243
+Camera Equipment (333)       737,870        21  35,136
+Children's Book (46)       1,528,475     2,020     756
+Childrenswear (264)           47,313        66     716
+Civic Design (259)            27,332        32     854
+Classical Music (36)         494,577       465   1,063
+Comedy (292)         245,472       199   1,233
+Comic Books (250)             84,777       130     652
+Comics (3)         1,886,665     1,739   1,084
+Community Gardens (305)       32,099        47     682
+Conceptual Art (20)          157,937       299     528
+Cookbooks (306)       84,860        95     893
+Country & Folk (37)          834,576       949     879
+Crafts (26)          472,211     1,121     421
+DIY (345)             48,734       159     306
+DIY Electronics (334)        167,268        65   2,573
+Dance (6)            415,098       522     795
+Design (7)         1,936,660       803   2,411
+Digital Art (21)             131,507       377     348
+Documentary (30)          11,168,660     5,558   2,009
+Drama (293)          252,390       182   1,386
+Drinks (307)         481,785       294   1,638
+Electronic Music (38)        220,267       583     377
+Events (251)          18,317        17   1,077
+Events (308)          37,512       140     267
+Experimental (294)            21,028        70     300
+Faith (318)          114,502       118     970
+Family (330)          34,150        42     813
+Fantasy (296)        110,187        29   3,799
+Farmer's Markets (310)        24,745        78     317
+Farms (309)          105,120       175     600
+Fashion (9)        3,797,833     3,837     989
+Festivals (282)       19,170        38     504
+Festivals (295)       19,950        21     950
+Fiction (47)       1,344,159     3,474     386
+Film & Video (11)          5,396,629     4,446   1,213
+Fine Art (276)        52,806       104     507
+Flight (336)         109,971        52   2,114
+Food (10)          6,838,775     4,406   1,552
+Food Trucks (311)            221,348       282     784
+Footwear (266)        77,956        62   1,257
+Gadgets (337)        821,246       197   4,168
+Games (12)           974,072       789   1,234
+Gaming Hardware (270)         72,520        42   1,726
+Graphic Design (27)          391,143       515     759
+Graphic Novels (252)         147,206       109   1,350
+Hardware (52)      7,674,171       911   8,423
+Hip-Hop (39)         327,470     1,371     238
+Horror (297)         400,209       143   2,798
+Illustration (22)            254,600       439     579
+Immersive (283)       18,601        29     641
+Indie Rock (40)    1,060,871     1,326     800
+Installations (288)           29,887        41     728
+Interactive Design (260)              58,478        52   1,124
+Jazz (41)            474,018       448   1,058
+Jewelry (267)         63,525       130     488
+Journalism (13)      440,914       654     674
+Kids (319)            22,839        27     845
+Live Games (271)              42,399       122     347
+Makerspaces (362)             20,130        11   1,830
+Metal (241)           55,456       119     466
+Mixed Media (54)             568,364       840     676
+Mobile Games (272)            92,205       214     430
+Movie Theaters (298)          64,585        34   1,899
+Music (14)         3,655,677     4,277     854
+Music Videos (299)            22,697        85     267
+Musical (284)        105,482        70   1,506
+Narrative Film (31)        7,045,417     2,281   3,088
+Nature (277)          30,069        99     303
+Nonfiction (48)    2,044,230     3,047     670
+Painting (23)        456,609       934     488
+People (278)          92,859       197     471
+Performance Art (24)         366,380       700     523
+Performances (254)            39,460        84     469
+Periodical (49)      574,465       437   1,314
+Photobooks (280)             142,323       188     757
+Photography (15)           2,039,428     2,688     758
+Places (279)          26,462       180     147
+Playing Cards (273)          227,625       102   2,231
+Plays (285)           68,777       109     630
+Poetry (50)           89,418       423     211
+Pop (42)             659,492       953     692
+Print (359)           79,814        59   1,352
+Product Design (28)       14,071,694     3,967   3,547
+Public Art (53)    1,029,645       773   1,332
+Publishing (18)    1,345,194     1,776     757
+Puzzles (274)        168,072        36   4,668
+R&B (322)             19,811        47     421
+Radio & Podcast (239)        174,543       209     835
+Ready-to-wear (269)           46,011        86     535
+Restaurants (312)            514,502       393   1,309
+Robots (338)         119,875        42   2,854
+Rock (43)          1,178,991     1,918     614
+Romance (300)         65,529        22   2,978
+Science Fiction (301)        266,216        69   3,858
+Sculpture (25)       436,662       558     782
+Shorts (32)        3,257,935     3,842     847
+Small Batch (313)            182,561       305     598
+Software (51)      1,016,509       798   1,273
+Sound (339)          135,289        37   3,656
+Space Exploration (340)       30,536        26   1,174
+Spaces (286)          17,545        12   1,462
+Spaces (314)          24,086        44     547
+Tabletop Games (34)        3,910,953     1,658   2,358
+Technology (16)    6,127,280     1,545   3,965
+Television (303)             150,558       143   1,052
+Theater (17)       2,256,162     1,963   1,149
+Thrillers (302)       76,963        78     986
+Vegan (315)           60,795        49   1,240
+Video Art (290)       24,769        12   2,064
+Video Games (35)          14,835,047     3,387   4,379
+Wearables (341)      769,866        81   9,504
+Web (342)            260,468       537     485
+Web (361)             44,975       154     292
+Webcomics (253)       23,773        28     849
+Webseries (33)     2,388,596     2,274   1,050
+Woodworking (356)             21,577       137     157
+World Music (44)             431,946       544     794
+Young Adult (328)             22,628        91     248
+Zines (329)           17,997        32     562
