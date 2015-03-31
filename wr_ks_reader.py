@@ -7,8 +7,11 @@ import locale
 import csv
 locale.setlocale(locale.LC_ALL, 'en_US')
 from collections import defaultdict
+from operator import itemgetter
 pp = pprint.PrettyPrinter(indent=4)
 
+sys.path.append('/opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages')
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 """
 Builds a nested dict representation of the key paths and data types of the JSON.
@@ -74,29 +77,28 @@ def project_predicate_test(proj,predicates):
     v = proj
     match = False
     for pred in predicates:
-        print pred
         for path_el in pred['path_els']:
             v = v[path_el]
-            print path_el, ", ", v,", ", pred['values']
         sv=str(v)
         if (sv==pred['values']) or (type(pred['values'])==list and sv in pred['values']):
             match = True
             break
-    print 'match %s' % match
     return match
 
 def main(wr_kickstarter_json_path,usd_fx_pathname,filter_predicates=[]):
     predicates = prep_predicates(filter_predicates) if filter_predicates else []
     fxusd = read_usd_fx_table(usd_fx_pathname)
-    (report,schema) = gen_ks_report(wr_kickstarter_json_path,fxusd,predicates)
-    print json.dumps(schema,indent=4)
-    print report
+    (report,schema,termvec) = gen_ks_report(wr_kickstarter_json_path,fxusd,predicates)
+    #print json.dumps(termvec,indent=4)
+    #print json.dumps(schema,indent=4)
+    #print report
 
 def gen_ks_report(wr_kickstarter_json_path,fxusd,predicates=[]):
     json_data = open(wr_kickstarter_json_path).read()
     j = json.loads(json_data)
     schema_tree = defaultdict(dict)
     tots = defaultdict(dict)
+    corpus = []
 
     template = {
         "pled_ctry"  : dict(),
@@ -124,16 +126,20 @@ def gen_ks_report(wr_kickstarter_json_path,fxusd,predicates=[]):
         for i in range(proj_count):
             proj = block_of_projects["projects"][i]
             if predicates and not project_predicate_test(proj,predicates):
-                print "bonk!"
                 continue
+
             # Build schema
             get_key_tree(proj,schema_tree)
+
             # Grab project values
             pled = proj["pledged"] * fxusd[proj["currency"]]["cur_buys_usd"]
             #goal = proj["goal"] * fxusd[proj["currency"]]["cur_buys_usd"]
             ctry = proj["country"]
             cat = "%s (%s)" % (proj["category"]["name"],proj["category"]["id"])
             state = proj["state"]
+
+            # Ingest descriptive text for TF-IDF
+            corpus.append( "%s %s" % (proj["blurb"].lower(), proj["name"].lower()) )
 
             # Ensure accumulation skeleton exists
             if state not in tots:
@@ -163,12 +169,17 @@ def gen_ks_report(wr_kickstarter_json_path,fxusd,predicates=[]):
         buf += "Per project for %s: %s\n" % (state,locale.format("%6d", tots[state]["pled_state"]/tots[state]["cnt_state"], grouping=True))
         buf += "'%s\n" % ("=" * 40)
     buf += "Number of projects, overall: %d\n" % cnt_all
-    return (buf,schema_tree)
+    vectorizer = TfidfVectorizer(min_df=10,ngram_range=(1,3),stop_words='english',lowercase=True)
+    X = vectorizer.fit_transform(corpus)
+    idf = vectorizer.idf_
+    termvec=dict(zip(vectorizer.get_feature_names(), idf))
+    termvec2=sorted(termvec.items(), key=itemgetter(1), reverse=True)
+    print json.dumps(termvec2,indent=4)
+    termvec3=dict(termvec2)
+    return (buf,schema_tree,termvec2)
 
 if __name__ == '__main__':
     min_args = 3
-    print len(sys.argv)<min_args
-    print (not os.path.exists(sys.argv[1]) or not os.path.exists(sys.argv[2]))
     if (len(sys.argv)<min_args) or (not os.path.exists(sys.argv[1]) or not os.path.exists(sys.argv[2])):
         print "Usage: wr_ks_reader.py <werobots_ks_data.json> <usd_fx_csv>"
         print "e.g. ./wr_ks_reader.py sample-data/five_projects_from-2014-12-02.json sample-data/usd_all_2015-03-25.csv"
