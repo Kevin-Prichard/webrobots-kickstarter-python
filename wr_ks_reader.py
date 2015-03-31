@@ -11,7 +11,7 @@ from operator import itemgetter
 pp = pprint.PrettyPrinter(indent=4)
 
 sys.path.append('/opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages')
-from sklearn.feature_extraction.text import TfidfVectorizer
+
 
 """
 Builds a nested dict representation of the key paths and data types of the JSON.
@@ -88,10 +88,9 @@ def project_predicate_test(proj,predicates):
 def main(wr_kickstarter_json_path,usd_fx_pathname,filter_predicates=[]):
     predicates = prep_predicates(filter_predicates) if filter_predicates else []
     fxusd = read_usd_fx_table(usd_fx_pathname)
-    (report,schema,termvec) = gen_ks_report(wr_kickstarter_json_path,fxusd,predicates)
-    #print json.dumps(termvec,indent=4)
-    #print json.dumps(schema,indent=4)
-    #print report
+    (report,schema) = gen_ks_report(wr_kickstarter_json_path,fxusd,predicates)
+    print json.dumps(schema,indent=4)
+    print report
 
 def gen_ks_report(wr_kickstarter_json_path,fxusd,predicates=[]):
     json_data = open(wr_kickstarter_json_path).read()
@@ -169,14 +168,7 @@ def gen_ks_report(wr_kickstarter_json_path,fxusd,predicates=[]):
         buf += "Per project for %s: %s\n" % (state,locale.format("%6d", tots[state]["pled_state"]/tots[state]["cnt_state"], grouping=True))
         buf += "'%s\n" % ("=" * 40)
     buf += "Number of projects, overall: %d\n" % cnt_all
-    vectorizer = TfidfVectorizer(min_df=10,ngram_range=(1,3),stop_words='english',lowercase=True)
-    X = vectorizer.fit_transform(corpus)
-    idf = vectorizer.idf_
-    termvec=dict(zip(vectorizer.get_feature_names(), idf))
-    termvec2=sorted(termvec.items(), key=itemgetter(1), reverse=True)
-    print json.dumps(termvec2,indent=4)
-    termvec3=dict(termvec2)
-    return (buf,schema_tree,termvec2)
+    return (buf,schema_tree)
 
 if __name__ == '__main__':
     min_args = 3
