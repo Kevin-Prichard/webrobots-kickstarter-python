@@ -1,6 +1,13 @@
 # werobots-kickstarter-python
 Simple reader for the Kickstarter scrape produced by WeRobots.com: http://webrobots.io/kickstarter-datasets/
 
+Dependencies:
+    TextBlob
+    BeautifulSoup
+    lxml
+    nltk
+    peewee (2.6.0)
+
 Usage:
 
     % ./wr_ks_reader.py <werobots_ks_data.json> <usd_fx_csv>

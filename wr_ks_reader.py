@@ -10,30 +10,8 @@ from collections import defaultdict
 from operator import itemgetter
 pp = pprint.PrettyPrinter(indent=4)
 
+# For MacPorts ... need to eliminate TODO
 sys.path.append('/opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages')
-
-
-"""
-Builds a nested dict representation of the key paths and data types of the JSON.
-Takes one object at a time, layering the schema data on top of prior iterations.
-"""
-def get_key_tree(json_obj,path_tree,depth=1):
-    keys = json_obj.keys()
-    for key in keys:
-        ktype = type(json_obj[key])
-        if ktype == dict:
-            path_tree[key] = dict()
-            get_key_tree(json_obj[key],path_tree[key],depth+1)
-        elif ktype == list:
-            path_tree[key] = list()
-            get_key_tree(json_obj[key],path_tree[key],depth+1)
-        else:
-            if key not in path_tree:
-                path_tree[key] = dict()
-            if ktype.__name__ not in path_tree[key]:
-                path_tree[key][ktype.__name__] = 1
-            else:
-                path_tree[key][ktype.__name__] += 1
 
 """ 
 Iterate a dictionary, generate a string buffer of key\tvalue pairs, assuming number
@@ -88,8 +66,7 @@ def project_predicate_test(proj,predicates):
 def main(wr_kickstarter_json_path,usd_fx_pathname,filter_predicates=[]):
     predicates = prep_predicates(filter_predicates) if filter_predicates else []
     fxusd = read_usd_fx_table(usd_fx_pathname)
-    (report,schema) = gen_ks_report(wr_kickstarter_json_path,fxusd,predicates)
-    print json.dumps(schema,indent=4)
+    report = gen_ks_report(wr_kickstarter_json_path,fxusd,predicates)
     print report
 
 def gen_ks_report(wr_kickstarter_json_path,fxusd,predicates=[]):
@@ -126,9 +103,6 @@ def gen_ks_report(wr_kickstarter_json_path,fxusd,predicates=[]):
             proj = block_of_projects["projects"][i]
             if predicates and not project_predicate_test(proj,predicates):
                 continue
-
-            # Build schema
-            get_key_tree(proj,schema_tree)
 
             # Grab project values
             pled = proj["pledged"] * fxusd[proj["currency"]]["cur_buys_usd"]
@@ -168,7 +142,7 @@ def gen_ks_report(wr_kickstarter_json_path,fxusd,predicates=[]):
         buf += "Per project for %s: %s\n" % (state,locale.format("%6d", tots[state]["pled_state"]/tots[state]["cnt_state"], grouping=True))
         buf += "'%s\n" % ("=" * 40)
     buf += "Number of projects, overall: %d\n" % cnt_all
-    return (buf,schema_tree)
+    return buf
 
 if __name__ == '__main__':
     min_args = 3
