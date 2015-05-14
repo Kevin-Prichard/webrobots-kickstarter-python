@@ -10,7 +10,7 @@ Dependencies:
 
 Usage:
 
-    % ./wr_ks_reader.py <werobots_ks_data.json> <usd_fx_csv>
+    % ./wr_ks_reader.py <webrobots_ks_data.json> <usd_fx_csv>
 
 Example with supplied sample data:
 

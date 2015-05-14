@@ -147,7 +147,7 @@ def gen_ks_report(wr_kickstarter_json_path,fxusd,predicates=[]):
 if __name__ == '__main__':
     min_args = 3
     if (len(sys.argv)<min_args) or (not os.path.exists(sys.argv[1]) or not os.path.exists(sys.argv[2])):
-        print "Usage: wr_ks_reader.py <werobots_ks_data.json> <usd_fx_csv>"
+        print "Usage: wr_ks_reader.py <webrobots_ks_data.json> <usd_fx_csv>"
         print "e.g. ./wr_ks_reader.py sample-data/five_projects_from-2014-12-02.json sample-data/usd_all_2015-03-25.csv"
         exit()
     main(sys.argv[1],sys.argv[2],sys.argv[3:] if len(sys.argv)>min_args else None)

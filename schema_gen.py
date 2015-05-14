@@ -105,7 +105,7 @@ def gen_schema(wr_kickstarter_json_path,predicates):
 if __name__ == '__main__':
     min_args = 2
     if (len(sys.argv)<min_args) or (not os.path.exists(sys.argv[1])):
-        print( "Usage: %s <werobots_ks_data.json> <usd_fx_csv>" % sys.argv[0] )
+        print( "Usage: %s <webrobots_ks_data.json> <usd_fx_csv>" % sys.argv[0] )
         print( "e.g. %s sample-data/five_projects_from-2014-12-02.json sample-data/usd_all_2015-03-25.csv" % sys.argv[0] )
         exit()
     main(sys.argv[1],sys.argv[2:] if len(sys.argv)>min_args else None)
