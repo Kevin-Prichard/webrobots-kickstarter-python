@@ -1,5 +1,5 @@
-# werobots-kickstarter-python
-Simple reader for the Kickstarter scrape produced by WeRobots.com: http://webrobots.io/kickstarter-datasets/
+# webrobots-kickstarter-python
+Simple reader for the Kickstarter scrape produced by WebRobots.io: http://webrobots.io/kickstarter-datasets/
 
 Dependencies:
     TextBlob
